@@ -1,1 +1,175 @@
 
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>개발자 블로그 | DEVLOG</title>
+  <style>
+    body {
+      font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+      background-color: #f7f8fa;
+      margin: 0;
+      color: #333;
+      display: flex;
+      justify-content: center;
+    }
+
+    main {
+      width: 100%;
+      max-width: 1080px;
+      background: #fff;
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      min-height: 100vh;
+    }
+
+    /* Sidebar (Profile) */
+    aside {
+      background: #111827;
+      color: #e5e7eb;
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    .profile img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 2px solid #374151;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+
+    .profile h1 {
+      margin: 0;
+      font-size: 1.4rem;
+      color: #fff;
+    }
+
+    .profile p {
+      font-size: 0.9rem;
+      color: #9ca3af;
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    nav a {
+      display: block;
+      color: #e5e7eb;
+      text-decoration: none;
+      margin: 0.4rem 0;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      color: #86efac;
+    }
+
+    /* Blog content */
+    section {
+      padding: 2rem 3rem;
+    }
+
+    section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: #111827;
+    }
+
+    article {
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    article h3 {
+      margin: 0;
+      font-size: 1.25rem;
+      color: #2563eb;
+    }
+
+    article p {
+      font-size: 0.95rem;
+      color: #4b5563;
+      line-height: 1.6;
+      margin: 0.5rem 0;
+    }
+
+    article time {
+      display: block;
+      font-size: 0.8rem;
+      color: #9ca3af;
+      margin-top: 0.3rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #9ca3af;
+      padding: 1.5rem 0;
+      border-top: 1px solid #e5e7eb;
+      grid-column: span 2;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+      aside {
+        align-items: center;
+        text-align: center;
+      }
+      section {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <aside>
+      <div class="profile">
+        <img src="profile.jpg" alt="Profile photo" />
+        <h1>홍길동</h1>
+        <p>10년차 개발자 · 블로그 운영자<br>코드로 세상과 대화합니다.</p>
+      </div>
+      <nav>
+        <a href="#">홈</a>
+        <a href="#">소개</a>
+        <a href="#">프로젝트</a>
+        <a href="#">연락하기</a>
+      </nav>
+    </aside>
+
+    <section>
+      <h2>최근 게시글</h2>
+
+      <article>
+        <h3>TypeScript에서 Utility Types를 효율적으로 활용하기</h3>
+        <p>TypeScript는 개발 생산성을 높이기 위해 다양한 Utility Type을 제공합니다. 이번 글에서는 자주 사용하는 Pick, Partial, Omit을 실제 사례와 함께 정리해보았습니다.</p>
+        <time datetime="2026-03-10">2026.03.10</time>
+      </article>
+
+      <article>
+        <h3>Next.js 15: 새로운 서버 액션(Server Actions) 정리</h3>
+        <p>Next.js 15에서 추가된 Server Actions 기능은 비동기 서버 로직을 단순화하며 코드의 분리를 명확히 제공합니다. 주요 변경점과 마이그레이션 팁을 알아봅니다.</p>
+        <time datetime="2026-02-25">2026.02.25</time>
+      </article>
+
+      <article>
+        <h3>효율적인 REST API 아키텍처 설계 원칙</h3>
+        <p>좋은 API는 단순히 동작하는 것을 넘어 예측 가능하고 유지보수가 용이해야 합니다. HTTP 메서드의 의미와 자원 중심적 설계에 대해 이야기합니다.</p>
+        <time datetime="2026-02-05">2026.02.05</time>
+      </article>
+    </section>
+
+    <footer>
+      © 2026 DEVLOG by 홍길동. All rights reserved.
+    </footer>
+  </main>
+</body>
+</html>
